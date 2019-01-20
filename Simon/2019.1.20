@@ -1,0 +1,20 @@
+22.Generate Pa什么的
+
+－－－－－手打分割线－－－－－
+
+class Solution {
+    List<String> result=new ArrayList<String>();
+    public List<String> generateParenthesis(int n) {
+        String a="";
+        add(a,n,n);
+        return result;
+    }
+    public void add(String a, int left, int right){
+        if(left==0 & right==0) {
+            result.add(a);
+            return;
+        }
+        if(left>0) add(a+"(",left-1, right);
+        if(right>left) add(a+")", left, right-1);
+    }
+}
