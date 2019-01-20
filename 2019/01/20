@@ -1,0 +1,32 @@
+# 344 Reverse String
+
+# Solution 1 (2018.03)
+  # Using StringBuilder and Java String method charAt to reverse the string
+  # Time Complexity: O(n)
+  # Space Complexity: O(n)
+  
+  class Solution {
+    public String reverseString(String s) {
+        int a = s.length();
+        StringBuilder reverse = new StringBuilder();
+        for (int j = a - 1; j >= 0; j --){
+            reverse.append(s.charAt(j));
+        }
+       
+         return reverse.toString();
+    }
+}
+  
+  
+# Solution 2 (2019.01.20)
+  # Using StringBuffer and Java.lang.StringBuilder.reverse() method
+  # Then using toString method for class Object returns a string
+  
+  class Solution {
+    public String reverseString(String s) {
+        StringBuffer s1 = new StringBuffer(s);
+        return s1.reverse().toString();
+    }
+}
+  
+  
